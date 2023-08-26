@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next Word Prediction</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="topnav">
+        <img style="height: 100px; width: 100px; margin-right: 280px; margin-left: 30px; position: absolute;" src="https://raw.githubusercontent.com/deepdubey197/My-Repo/main/nw.png" alt="">
+           <div class="links">
+            <a style="margin-right: 80px;" href="/">Home</a>
+            <a style="margin-right: 80px;" href="/predict">Predict</a>
+            <a style="margin-right: 80px;" href="/about">About</a>
+
+
+           </div>
+
+
+    </header>
+    <h1 class="tagline">Do you need help in writing sentences?</h1>
+    <div style="display: flex;">
+        <h2 class="statement">Well you're at the right place!</h2>
+        <form action="/predict">
+            <button class="btn" type="submit">Get Started</button>
+        </form>
+    </div>
+    
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Noto+Sans:wght@200;300;400;500;600;900&family=Poppins:wght@500;600;700&display=swap');
+
+body, html {
+margin: 0;
+padding: 0;
+background-color: #fce77e;
+}
+
+.tagline{
+    font-family: Poppins;
+    font-size: 80px;
+    color: rgb(26, 185, 138);
+    font-weight: 800;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+
+.statement{
+    font-family: Poppins;
+    font-size: 50px;
+    color: #fa6166;
+    font-weight: 800;
+    margin-left: 100px;
+    margin-top: 30px;
+
+}
+
+.topnav{
+display: flex;
+background-color: #fa6166;
+margin-top: 20px;
+overflow: hidden;
+
+font-family: Poppins;
+text-decoration: none;
+color: white;
+height: 100px;
+margin: 0;
+box-shadow: 0 0 20px #fa6166;
+
+}
+.links{
+padding-top: 27px;
+margin-left: 400px;
+
+}
+
+.topnav a{
+text-decoration: none;
+color: white;
+font-size: 30px;
+padding-top: 30px;
+font-weight:800;
+}
+
+.btn{
+    height: 50px;
+    width: 150px;
+    margin-left: 80px;
+    margin-top: 42px;
+    color: white;
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 20px;
+    background-color: #fa6166;
+    border-radius: 5px;
+    border-width: 0;
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+.btn:hover{
+    background-color: rgb(26, 135, 185);
+    cursor: pointer;
+}
+
+</style>

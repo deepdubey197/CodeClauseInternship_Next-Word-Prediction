@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next Word Prediction</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="topnav">
+        <img  style="height: 100px; width: 100px; margin-right: 280px; margin-left: 30px; position: absolute;" src="https://raw.githubusercontent.com/deepdubey197/My-Repo/main/nw.png" alt="">
+           <div class="links">
+            <a style="margin-right: 80px;" href="/">Home</a>
+            <a style="margin-right: 80px;" href="/predict">Predict</a>
+            <a style="margin-right: 80px;" href="/about">About</a>
+
+
+           </div>
+
+
+    </header>
+
+    <h2 class="comment">Enter Your Text Here</h2>
+    <div class="prediction">
+
+        <form action="/predict" method="post">
+
+            <input class="text-input" type="text" id="text_input" name="text_input">
+            <button class="btn" type="submit">Predict</button>
+            <br><br>
+        </form>
+        {% if predicted_words %}
+            <h2 class="predicted-words">Here's what we have predicted:</h2>
+            <ul style="color: rgb(26, 185, 138); font-size: 25px; font-weight: 600; font-family: Poppins;">
+                {% for word in predicted_words %}
+                    <li>{{ word }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+</body>
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Noto+Sans:wght@200;300;400;500;600;900&family=Poppins:wght@500;600;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #fce77e;
+}
+
+
+.topnav{
+    display: flex;
+    background-color: #fa6166;
+    margin-top: 20px;
+    overflow: hidden;
+
+    font-family: Poppins;
+    text-decoration: none;
+    color: white;
+    height: 100px;
+    margin: 0;
+    box-shadow: 0 0 20px #fa6166;
+
+}
+.links{
+    padding-top: 27px;
+    margin-left: 400px;
+
+}
+
+.topnav a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+    font-weight:800;
+
+}
+
+.heading{
+    font-family: Poppins;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #fa6166;
+}
+
+.comment{
+    font-family: Poppins;
+    font-size: 80px;
+    color: rgb(26, 185, 138);
+    font-weight: 800;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+
+.prediction{
+    margin-left: 100px;
+    margin-top: -45px;
+    margin-bottom:50px;
+    padding-bottom:50px;
+}
+
+.text-input{
+    width: 900px;
+    height: 50px;
+    border-radius: 5px;
+    border-width: 0;
+    font-size:25px;
+}
+
+.btn{
+    height: 50px;
+    width: 100px;
+    margin-left: 30px;
+    color: white;
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 20px;
+    background-color: #fa6166;
+    border-radius: 5px;
+    border-width: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: rgb(26, 135, 185);
+    cursor: pointer;
+}
+
+.predicted-words{
+    font-family: Poppins;
+    font-size: 35px;
+
+    margin-top: 40px;
+    color: #fa6166;
+}
+
+
+</style>
+</html>
